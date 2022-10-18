@@ -24,10 +24,20 @@ function generateLink(e) {
         document.execCommand("copy");
         alert("Link has been copied to clipboard");
       }
-      }
+    }
       const copy = document.querySelector(".copy")
       copy.addEventListener("click", () => {
-        return copyText(downloadLink)
-      }
+        return copyText(downloadLink);
+      })
+
+      const audio1 = '<audio width="300" height="32" controls="controls" src="';
+      const audio2= '" type="audio/mp3"></audio>'
+      const embedAudio = document.getElementById("embed-audio");
+      embedAudio.value = `${audio1}${downloadLink.value}${audio2}`
+
+      const copyAudio = document.querySelector(".copy-audio");
+      copyAudio.addEventListener("click", () => {
+        return copyText(embedAudio);
+      })
     }
   }
