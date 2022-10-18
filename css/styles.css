@@ -271,7 +271,7 @@ content > i {
   font-size: 1.8rem;
 }
 
-.content .btn {
+.content #btn {
   padding: 1.2rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -285,7 +285,7 @@ content > i {
   transition: all .3s;
 }
 
-.content .btn:hover {
+.content #btn:hover {
   transform: translateY(-3px);
   background-color: var(--color-primary);
 }
